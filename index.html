@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小江的學習歷程網站</title>
+
+  <!-- Bootstrap CSS（CDN，絕對路徑） -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+  <!-- 自己的 CSS（相對路徑），放在 Bootstrap 之後，才能覆寫 Bootstrap 的樣式 -->
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+
+  <!-- ================= 元件 1：導覽列 Navbar ================= -->
+  <!-- fixed-top：固定在畫面上方；navbar-expand-lg：大螢幕展開、小螢幕收合成漢堡選單 -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#home">小江的網站</a>
+      <!-- 漢堡按鈕：data-bs-target 指向下方選單的 id -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false" aria-label="切換選單">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <!-- href="#about"：頁內連結，點了會捲動到 id="about" 的區塊 -->
+          <li class="nav-item"><a class="nav-link" href="#about">關於我</a></li>
+          <li class="nav-item"><a class="nav-link" href="#scenery">旅行風景</a></li>
+          <li class="nav-item"><a class="nav-link" href="#food">美食分享</a></li>
+          <li class="nav-item"><a class="nav-link" href="#works">作品</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">聯絡</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ================= 元件 2：HERO 區 ================= -->
+  <header id="home" class="hero text-white text-center d-flex align-items-center">
+   <div class="container">
+
+     <h1 class="display-4 fw-bold">嗨，我是小江</h1>
+
+      <p class="lead">
+        用照片記錄生活，用旅行發現美好。
+      </p>
+
+      <a href="#scenery" class="btn btn-light btn-lg mt-3">
+        探索我的旅行
+      </a>
+
+    </div>
+  </header>
+  <!-- 關於我：用格線系統分成左右兩欄 -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-md-4 text-center">
+          <img src="images/avatar.png" class="img-fluid rounded-circle about-img" alt="小江的照片">
+        </div>
+        <div class="col-md-8">
+          <h2 class="section-title">關於我</h2>
+          <p> 
+            嗨！我是小江，很高興認識你！
+          </p>
+
+          <p>
+           我是一個喜歡旅行、攝影和探索新事物的人。
+           我喜歡走進不同的城市，欣賞街道風景、
+           特別的建築，以及充滿特色的咖啡廳。
+          </p>
+
+          <p>
+           除了旅行，我也很喜歡品嚐美食。
+           每到一個新的地方，我都想認識當地的特色料理，
+           並用照片記錄美麗的風景和美味的食物。
+          </p>
+
+          <p>
+           對我來說，旅行不只是看風景，
+           也是體驗不同文化、發現生活美好的方式。
+           希望透過這個網站，分享我的興趣、
+           旅行回憶和生活中的小故事。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 元件 3：圖片輪播 Carousel ================= -->
+<section id="scenery" class="py-5">
+  <div class="container">
+    <p class="about-label text-center">MY TRAVEL</p>
+    <h2 class="section-title text-center mb-4">旅行風景</h2>
+
+    <p class="text-center mb-5">
+      我喜歡用相機記錄旅行中的美好時光，
+      欣賞不同城市的風景、建築和街道。
+    </p>
+
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+          <img src="images/a3.jpeg"
+               class="card-img-top"
+               alt="京都清水寺">
+          <div class="card-body">
+            <h5 class="card-title">京都・清水寺</h5>
+            <p class="card-text">
+              京都是一座充滿日本傳統文化的城市。
+              清水寺的建築和周圍的自然風景，
+              讓人感受到寧靜又美麗的氣氛。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+          <img src="images/a4.jpeg"
+               class="card-img-top"
+               alt="東京街景">
+          <div class="card-body">
+            <h5 class="card-title">東京・城市街景</h5>
+            <p class="card-text">
+              東京是一座充滿活力的城市，
+              有熱鬧的街道、特色商店和現代建築。
+              我喜歡觀察城市中的日常風景。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+          <img src="images/a5.jpeg"
+               class="card-img-top"
+               alt="大阪道頓堀">
+          <div class="card-body">
+            <h5 class="card-title">大阪・道頓堀</h5>
+            <p class="card-text">
+              道頓堀有熱鬧的街道、特色招牌
+              和各種美食，是大阪很有代表性的地方。
+              每個角落都有不同的風景。
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+          <img src="images/a6.jpeg"
+               class="card-img-top"
+               alt="日本特色咖啡廳">
+          <div class="card-body">
+            <h5 class="card-title">日本・特色咖啡廳</h5>
+
+            <p class="card-text">
+              我喜歡探索不同城市裡有特色的咖啡廳。
+              溫暖的陽光、舒適的空間和一杯咖啡，
+              都能讓旅行變得更加美好。
+              我也喜歡用照片記錄咖啡廳裡的美麗角落。
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+  
+   <!-- ============= djhjdhs ======= -->
+
+<section id="food" class="py-5 bg-light">
+  <div class="container">
+    <p class="about-label text-center">MY FAVORITE FOOD</p>
+    <h2 class="section-title text-center mb-4">美食分享</h2>
+
+    <p class="text-center mb-5">
+      旅行除了欣賞風景，也不能錯過當地美食。
+      我喜歡品嚐不同料理，感受每個地方的特色。
+    </p>
+
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+          <img src="images/a7.jpeg"
+               class="card-img-top"
+               alt="日本壽司">
+          <div class="card-body">
+            <h5 class="card-title">日本壽司</h5>
+            <p class="card-text">
+              壽司是日本很有代表性的料理，
+              以醋飯搭配魚類或其他食材，
+              味道簡單又有特色。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+          <img src="images/a8.jpeg"
+               class="card-img-top"
+               alt="日本拉麵">
+          <div class="card-body">
+            <h5 class="card-title">日本拉麵</h5>
+            <p class="card-text">
+              拉麵有不同風味的湯頭，
+              搭配麵條、叉燒和配料，
+              是我很喜歡的日本美食之一。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+          <img src="images/a9.jpeg"
+               class="card-img-top"
+               alt="大阪章魚燒">
+          <div class="card-body">
+            <h5 class="card-title">大阪章魚燒</h5>
+            <p class="card-text">
+              章魚燒是大阪的特色小吃，
+              外層香軟，裡面有章魚和配料，
+              是很受歡迎的街頭美食。
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- ================= 元件 4：卡片排版 Card + Grid ================= -->
+  <section id="works" class="py-5">
+    <div class="container">
+      <h2 class="section-title text-center mb-4">我的作品</h2>
+      <!-- row-cols-1：手機一欄；row-cols-md-3：平板以上三欄；g-4：卡片間距 -->
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <img src="images/work1.png" class="card-img-top" alt="作品一截圖">
+            <div class="card-body">
+              <h5 class="card-title">Google Site 個人網站</h5>
+              <p class="card-text">初次規劃網站：主題定位、目標受眾與核心訊息。</p>
+              <a href="#" class="btn btn-primary btn-sm">查看作品</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <img src="images/work2.png" class="card-img-top" alt="作品二截圖">
+            <div class="card-body">
+              <h5 class="card-title">校園美食黑客松</h5>
+              <p class="card-text">和組員在 90 分鐘內合作完成三頁式美食指南網站。</p>
+              <a href="#" class="btn btn-primary btn-sm">查看作品</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <img src="images/work3.png" class="card-img-top" alt="作品三截圖">
+            <div class="card-body">
+              <h5 class="card-title">HTML／CSS 自我介紹頁</h5>
+              <p class="card-text">初次手寫程式碼，學會骨架與美化分開管理。</p>
+              <a href="#" class="btn btn-primary btn-sm">查看作品</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 元件 5：Footer 頁尾 ================= -->
+  <footer id="contact" class="bg-dark text-white-50 py-4">
+    <div class="container text-center">
+      <p class="mb-1">聯絡我：周氏茶江@example.com</p>
+      <p class="mb-0 small">&copy; 2026 小江．網站設計與賞析課程作品</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS：導覽列收合與輪播需要它 -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
